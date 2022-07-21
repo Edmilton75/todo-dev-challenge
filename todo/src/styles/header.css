@@ -1,0 +1,14 @@
+.header {
+    max-width: 1440px;
+  }
+  
+  .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 36px;
+    margin-block: 32px;
+    font-family: 'Raleway', sans-serif;
+  }
+  
