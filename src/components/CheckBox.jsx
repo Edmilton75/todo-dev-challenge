@@ -1,12 +1,12 @@
 import React from "react";
 import "../styles/checkbox.css"
 
-const CheckBox = () => {
+const CheckBox = (props) => {
   return (
     <div className="content-check">
       <div className="check">
         <input type="checkbox" name="add" id="add" />
-        cont
+        {props.text}
       </div>
     </div>
   );
