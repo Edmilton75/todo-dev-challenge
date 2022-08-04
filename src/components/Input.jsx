@@ -20,13 +20,7 @@ const Input = () => {
   
   }
 
-  // function validateForm() {
-  //   if(document.getElementsByName('addTodo').value == ''){
-  //     alert('Por favor, preencha o campo')
-  //     document.getElementsByName('addTodo').focus()
-  //     return false
-  //   }
-  // }
+  
   function defaultForm(e) {
     e.preventDefault();
   }
