@@ -5,19 +5,34 @@ import CheckBox from "./CheckBox";
 const Input = () => {
   const [textInput, setTextInput] = useState("");
   const [todos, setTodos] = useState([]);
-
+  
   function handleAddTodo() {
-    const newTodo = {
-      text: textInput,
-    };
+    if(textInput){
 
-    setTodos(prevState => [...prevState,newTodo]);
+      const newTodo = {
+        text: textInput,
+      };
+  
+      setTodos(prevState => [...prevState,newTodo]);
+    } else {
+      alert('por favor preencha o campo')
+    }
   
   }
 
+  // function validateForm() {
+  //   if(document.getElementsByName('addTodo').value == ''){
+  //     alert('Por favor, preencha o campo')
+  //     document.getElementsByName('addTodo').focus()
+  //     return false
+  //   }
+  // }
   function defaultForm(e) {
     e.preventDefault();
   }
+  
+  if (textInput === null) return null
+  
   return (
     <form onSubmit={defaultForm}>
       <div className="content">
@@ -26,13 +41,15 @@ const Input = () => {
           className="add"
           placeholder="Add details"
           onChange={(e) => setTextInput(e.target.value)}
+          required
         />
         <button type="submit" onClick={handleAddTodo}>
           Add
         </button>
-        {todos.map((todo) => (
+        
+        {( todos.map((todo) => (
           <CheckBox text={todo.text} key={todo.text} />
-        ))}
+        )))}
       </div>
     </form>
   );
