@@ -25,8 +25,6 @@ const Input = () => {
     e.preventDefault();
   }
   
-  if (textInput === null) return null
-  
   return (
     <form onSubmit={defaultForm}>
       <div className="content">
